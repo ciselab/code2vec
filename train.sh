@@ -15,4 +15,4 @@ model_dir=models/${type}
 
 mkdir -p ${model_dir}
 set -e
-python3 -u code2vec.py --data ${data} --test ${test_data} --save ${model_dir}/saved_model
+python -u code2vec.py --data ${data} --test ${test_data} --save ${model_dir}/saved_model > out.txt 2> log_err.txt

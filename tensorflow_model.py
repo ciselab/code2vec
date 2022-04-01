@@ -419,7 +419,7 @@ class Code2VecModel(Code2VecModelBase):
                 else:
                     output_file.write('\t\t predicted correctly at rank: ' + str(prediction_idx + 1) + '\n')
             else:
-                output_file.write('No results for predicting: ' + original_name)
+                output_file.write('No results for predicting: ' + original_name + '\n')
 
     def _trace_training(self, sum_loss, batch_num, multi_batch_start_time):
         multi_batch_elapsed = time.time() - multi_batch_start_time

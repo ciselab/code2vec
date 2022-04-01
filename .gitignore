@@ -6,3 +6,4 @@
 **/venv/**
 *.tar.gz
 **/log.txt
+**/__pycache__/**
