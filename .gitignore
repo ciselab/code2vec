@@ -3,5 +3,6 @@
 **/models/**
 **/data/**
 **/.idea/**
+**/venv/**
 *.tar.gz
 **/log.txt
