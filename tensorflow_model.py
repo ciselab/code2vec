@@ -134,7 +134,7 @@ class Code2VecModel(Code2VecModelBase):
                 self.saver.save(self.sess, release_name)
                 return None  # FIXME: why do we return none here?
 
-        with open('log.txt', 'w') as log_output_file:
+        with open('results.txt', 'w') as log_output_file:
             if self.config.EXPORT_CODE_VECTORS:
                 code_vectors_file = open(self.config.TEST_DATA_PATH + '.vectors', 'w')
             total_predictions = 0

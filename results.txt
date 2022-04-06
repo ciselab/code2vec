@@ -1,0 +1,55 @@
+Original: pre|head, predicted 1st: pre|head, score: 35.30909
+Original: content, predicted 1st: content, score: 26.488102
+Original: init, predicted 1st: init, score: 19.22986
+No results for predicting: load|filesystem|name
+No results for predicting: get|filesystem|conf|key
+No results for predicting: get|test|file|system
+No results for predicting: get|test|path
+Original: to|string, predicted 1st: to|string, score: 21.109032
+		 predicted correctly at rank: 2, score: 12.873659
+Original: setup, predicted 1st: set|up, score: 20.474743
+No results for predicting: test|concat|empty|files
+No results for predicting: test|concat|missing|target
+No results for predicting: test|concat|file|on|file
+No results for predicting: test|concat|on|self
+No results for predicting: test|delete|empty|dir|non|recursive
+No results for predicting: test|delete|empty|dir|recursive
+No results for predicting: test|delete|nonexistent|path|recursive
+No results for predicting: test|delete|nonexistent|path|non|recursive
+No results for predicting: test|delete|non|empty|dir|non|recursive
+No results for predicting: test|delete|non|empty|dir|recursive
+Original: setup, predicted 1st: set|up, score: 33.61904
+No results for predicting: test|append|to|empty|file
+No results for predicting: test|append|nonexistent|file
+No results for predicting: test|append|to|existing|file
+No results for predicting: test|append|missing|target
+No results for predicting: test|rename|file|being|appended
+No results for predicting: test|mk|dir|rm|dir
+No results for predicting: test|mk|dir|rm|rf|dir
+No results for predicting: test|no|mkdir|over|file
+No results for predicting: test|mkdir|over|parent|file
+Original: create|configuration, predicted 1st: create|configuration, score: 25.194962
+Original: teardown, predicted 1st: tear|down, score: 35.7564
+No results for predicting: test|open|read|zero|byte|file
+No results for predicting: test|open|read|dir
+No results for predicting: test|open|read|dir|with|child
+No results for predicting: test|open|file|twice
+No results for predicting: test|sequential|read
+Original: get|machines, predicted 1st: get|machines, score: 36.249786
+Original: get|racks, predicted 1st: get|racks, score: 38.20948
+No results for predicting: get|random|machines
+No results for predicting: build|machine|node|map
+No results for predicting: get|machine|by|name
+Original: distance, predicted 1st: distance, score: 24.172493
+No results for predicting: build|rack|node|map
+No results for predicting: get|rack|by|name
+Original: get|maximum|distance, predicted 1st: get|maximum|distance, score: 35.633778
+No results for predicting: parse|topology|tree
+No results for predicting: test|create|new|file
+No results for predicting: test|create|file|over|existing|file|no|overwrite
+No results for predicting: test|overwrite|existing|file
+No results for predicting: test|overwrite|empty|directory
+No results for predicting: test|overwrite|non|empty|directory
+No results for predicting: test|created|file|is|immediately|visible
+[0.22641509 0.24528302 0.24528302 0.24528302 0.24528302 0.24528302
+ 0.24528302 0.24528302 0.24528302 0.24528302]
