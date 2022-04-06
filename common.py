@@ -177,6 +177,19 @@ class common:
             for array in arrays
         )
 
+
+    @staticmethod
+    def get_first_match_word_from_top_predictions_with_score(special_words, original_name, top_predicted_words, scores)\
+            -> Optional[Tuple[int, str, float]]:
+        normalized_original_name = common.normalize_word(original_name)
+        scores_dict = dict(zip(top_predicted_words, scores))
+        for suggestion_idx, predicted_word in enumerate(
+                common.filter_impossible_names(special_words, top_predicted_words)):
+            normalized_possible_suggestion = common.normalize_word(predicted_word)
+            if normalized_original_name == normalized_possible_suggestion:
+                return suggestion_idx, predicted_word, scores_dict[predicted_word]
+        return None
+
     @staticmethod
     def get_first_match_word_from_top_predictions(special_words, original_name, top_predicted_words) -> Optional[Tuple[int, str]]:
         normalized_original_name = common.normalize_word(original_name)
