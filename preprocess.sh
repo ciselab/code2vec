@@ -18,10 +18,11 @@
 #   recommended to use a multi-core machine for the preprocessing 
 #   step and set this value to the number of cores.
 # PYTHON - python3 interpreter alias.
-TRAIN_DIR='C:/Users/Ruben-pc/Documents/Master_thesis/code2vec/data/java-testPipeline/training-small'
-VAL_DIR='C:/Users/Ruben-pc/Documents/Master_thesis/code2vec/data/java-testPipeline/validation-small'
-TEST_DIR='C:/Users/Ruben-pc/Documents/Master_thesis/code2vec/data/java-testPipeline/test-small'
-DATASET_NAME='java-testPipeline'
+DATA_DIR=$1
+TRAIN_DIR="${DATA_DIR}/training-small"
+VAL_DIR="${DATA_DIR}/validation-small"
+TEST_DIR="${DATA_DIR}/test-small"
+DATASET_NAME=$2
 MAX_CONTEXTS=200
 WORD_VOCAB_SIZE=1301136
 PATH_VOCAB_SIZE=911417
