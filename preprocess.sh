@@ -19,9 +19,9 @@
 #   step and set this value to the number of cores.
 # PYTHON - python3 interpreter alias.
 DATA_DIR=$1
-TRAIN_DIR="${DATA_DIR}/training-small"
-VAL_DIR="${DATA_DIR}/validation-small"
-TEST_DIR="${DATA_DIR}/test-small"
+TRAIN_DIR="${DATA_DIR}/training"
+VAL_DIR="${DATA_DIR}/validation"
+TEST_DIR="${DATA_DIR}/test"
 DATASET_NAME=$2
 MAX_CONTEXTS=200
 WORD_VOCAB_SIZE=1301136
