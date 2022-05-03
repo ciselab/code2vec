@@ -134,7 +134,7 @@ class Code2VecModel(Code2VecModelBase):
                 self.saver.save(self.sess, release_name)
                 return None  # FIXME: why do we return none here?
 
-        with open('results.txt', 'w') as log_output_file:
+        with open('results.txt', 'w') as log_output_file, open('predicted_words.txt', 'w') as log_predicted_words:
             if self.config.EXPORT_CODE_VECTORS:
                 code_vectors_file = open(self.config.TEST_DATA_PATH + '.vectors', 'w')
             total_predictions = 0
@@ -169,6 +169,7 @@ class Code2VecModel(Code2VecModelBase):
                     if self.config.printScores:
                         self._log_prediction_scores_during_evaluation(zip(original_names, top_words, top_scores)
                                                                       , log_output_file)
+                        self._log_predicted_words_during_evaluation(zip(original_names, top_words), log_predicted_words)
                     else:
                         self._log_predictions_during_evaluation(zip(original_names, top_words), log_output_file)
                     topk_accuracy_evaluation_metric.update_batch(zip(original_names, top_words))
@@ -441,6 +442,10 @@ class Code2VecModel(Code2VecModelBase):
                                       + str(predicted_score) + '\n')
             else:
                 output_file.write('No results for predicting: ' + original_name + '\n')
+
+    def _log_predicted_words_during_evaluation(self, results, output_file):
+        for original_name, top_predicted_words in results:
+            output_file.write('Original: ' + original_name + ', predicted: ' + top_predicted_words[0] + '\n')
 
     def _trace_training(self, sum_loss, batch_num, multi_batch_start_time):
         multi_batch_elapsed = time.time() - multi_batch_start_time

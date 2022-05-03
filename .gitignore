@@ -8,8 +8,10 @@
 **/log.txt
 **/__pycache__/**
 **/eval_log.txt
-**/results.txt
-**/F1_score_log.txt
+results.txt
+F1_score_log.txt
+predicted_words.txt
+tempData/**
 **.docx
 **.stackdump
 **.dll
