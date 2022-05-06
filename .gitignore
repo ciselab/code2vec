@@ -1,7 +1,6 @@
 *.class
 *.lst
 **/models/**
-**/data/**
 **/.idea/**
 **/venv/**
 *.tar.gz
