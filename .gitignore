@@ -16,3 +16,7 @@ tempData/**
 **.dll
 **.xml
 **.iml
+
+data
+models
+model
